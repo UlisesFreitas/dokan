@@ -323,7 +323,7 @@ function dokan_get_dashboard_nav() {
             'pos'   => 40
         ),
         'store' => array(
-            'title' => __( 'Ajustes de tienda', 'dokan-lite'),
+            'title' => __( 'Store', 'dokan-lite'),
             'icon'  => '<i class="fa fa-university"></i>',
             'url'   => dokan_get_navigation_url( 'settings/store' ),
             'pos'   => 50
