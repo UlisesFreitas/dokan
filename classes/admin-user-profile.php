@@ -191,11 +191,11 @@ class Dokan_Admin_User_Profile {
                     <th><?php _e( 'Payment Options : ', 'dokan-lite' ); ?></th>
                 </tr>
 
-                <?php if( isset( $store_settings['payment']['paypal']['email'] ) ) { ?>
+                <?php if( isset( $store_settings['payment']['mercadopago']['email'] ) ) { ?>
                     <tr>
-                        <th><?php _e( 'Paypal Email ', 'dokan-lite' ); ?></th>
+                        <th><?php _e( 'MercadoPago email', 'dokan-lite' ); ?></th>
                         <td>
-                            <input type="text" disabled class="regular-text" value="<?php echo esc_attr( $store_settings['payment']['paypal']['email'] ); ?>">
+                            <input type="text" disabled class="regular-text" value="<?php echo esc_attr( $store_settings['payment']['mercadopago']['email'] ); ?>">
                         </td>
                     </tr>
                 <?php } ?>

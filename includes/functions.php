@@ -957,7 +957,7 @@ function dokan_get_store_info( $seller_id ) {
     $defaults = array(
         'store_name' => '',
         'social'     => array(),
-        'payment'    => array( 'paypal' => array( 'email' ), 'bank' => array() ),
+        'payment'    => array( 'mercadopago' => array( 'email' ), 'bank' => array() ),
         'phone'      => '',
         'show_email' => 'off',
         'address'    => '',
@@ -1009,7 +1009,7 @@ function dokan_get_store_tabs( $store_id ) {
  * @param string $type
  * @return string
  */
-function dokan_get_seller_withdraw_mail( $seller_id, $type = 'paypal' ) {
+function dokan_get_seller_withdraw_mail( $seller_id, $type = 'mercadopago' ) {
     $info = dokan_get_store_info( $seller_id );
 
     if ( isset( $info['payment'][$type]['email'] ) ) {

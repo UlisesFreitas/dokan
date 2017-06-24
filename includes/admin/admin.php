@@ -386,7 +386,7 @@ class Dokan_Admin_Settings {
                     'label'   => __( 'Withdraw Methods', 'dokan-lite' ),
                     'desc'    => __( 'Withdraw methods for vendors', 'dokan-lite' ),
                     'type'    => 'multicheck',
-                    'default' => array( 'paypal' => 'paypal' ),
+                    'default' => array( 'mercadopago' => 'mercadopago' ),
                     'options' => dokan_withdraw_get_methods()
                 ),
                 'withdraw_limit' => array(

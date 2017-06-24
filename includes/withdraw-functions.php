@@ -7,9 +7,9 @@
  */
 function dokan_withdraw_register_methods() {
     $methods = array(
-        'paypal' => array(
-            'title'    =>  __( 'PayPal', 'dokan-lite' ),
-            'callback' => 'dokan_withdraw_method_paypal'
+        'mercadopago' => array(
+            'title'    =>  __( 'MercadoPago', 'dokan-lite' ),
+            'callback' => 'dokan_withdraw_method_mercadopago'
         ),
         'bank' => array(
             'title'    => __( 'Bank Transfer', 'dokan-lite' ),
@@ -39,12 +39,12 @@ function dokan_withdraw_get_methods() {
 /**
  * Get active withdraw methods.
  *
- * Default is paypal
+ * Default is mercadopago
  *
  * @return array
  */
 function dokan_withdraw_get_active_methods() {
-    $methods = dokan_get_option( 'withdraw_methods', 'dokan_withdraw', array( 'paypal' ) );
+    $methods = dokan_get_option( 'withdraw_methods', 'dokan_withdraw', array( 'mercadopago' ) );
 
     return $methods;
 }
@@ -82,22 +82,19 @@ function dokan_withdraw_get_method_title( $method_key ) {
 }
 
 /**
- * Callback for PayPal in store settings
+ * Callback for MercadoPago in store settings
  *
  * @global WP_User $current_user
  * @param array $store_settings
  */
-function dokan_withdraw_method_paypal( $store_settings ) {
+function dokan_withdraw_method_mercadopago( $store_settings ) {
     global $current_user;
 
-    $email = isset( $store_settings['payment']['paypal']['email'] ) ? esc_attr( $store_settings['payment']['paypal']['email'] ) : $current_user->user_email ;
+    $email = isset( $store_settings['payment']['mercadopago']['email'] ) ? esc_attr( $store_settings['payment']['mercadopago']['email'] ) : $current_user->user_email ;
     ?>
     <div class="dokan-form-group">
         <div class="dokan-w8">
-            <div class="dokan-input-group">
-                <span class="dokan-input-group-addon"><?php _e( 'E-mail', 'dokan-lite' ); ?></span>
-                <input value="<?php echo $email; ?>" name="settings[paypal][email]" class="dokan-form-control email" placeholder="you@domain.com" type="text">
-            </div>
+			<input value="<?php echo $email; ?>" name="settings[mercadopago][email]" class="dokan-form-control email" placeholder="email@dominio.com" type="text">
         </div>
     </div>
     <?php

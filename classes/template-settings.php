@@ -276,8 +276,8 @@ class Dokan_Template_Settings {
             }
         }
 
-        if ( !empty( $_POST['setting_paypal_email'] ) ) {
-            $email = filter_var( $_POST['setting_paypal_email'], FILTER_VALIDATE_EMAIL );
+        if ( !empty( $_POST['setting_mercadopago_email'] ) ) {
+            $email = filter_var( $_POST['setting_mercadopago_email'], FILTER_VALIDATE_EMAIL );
             if ( empty( $email ) ) {
                 $error->add( 'dokan_email', __( 'Invalid email', 'dokan-lite' ) );
             }
@@ -332,8 +332,8 @@ class Dokan_Template_Settings {
             }
         }
 
-        if ( !empty( $_POST['setting_paypal_email'] ) ) {
-            $email = filter_var( $_POST['setting_paypal_email'], FILTER_VALIDATE_EMAIL );
+        if ( !empty( $_POST['setting_mercadopago_email'] ) ) {
+            $email = filter_var( $_POST['setting_mercadopago_email'], FILTER_VALIDATE_EMAIL );
 
             if ( empty( $email ) ) {
                 $error->add( 'dokan_email', __( 'Invalid email', 'dokan-lite' ) );
@@ -377,8 +377,8 @@ class Dokan_Template_Settings {
             }
         }
 
-        if ( !empty( $_POST['setting_paypal_email'] ) ) {
-            $email = filter_var( $_POST['setting_paypal_email'], FILTER_VALIDATE_EMAIL );
+        if ( !empty( $_POST['setting_mercadopago_email'] ) ) {
+            $email = filter_var( $_POST['setting_mercadopago_email'], FILTER_VALIDATE_EMAIL );
             if ( empty( $email ) ) {
                 $error->add( 'dokan_email', __( 'Invalid email', 'dokan-lite' ) );
             }
@@ -412,8 +412,8 @@ class Dokan_Template_Settings {
         $error = new WP_Error();
 
 
-        if ( !empty( $_POST['setting_paypal_email'] ) ) {
-            $email = filter_var( $_POST['setting_paypal_email'], FILTER_VALIDATE_EMAIL );
+        if ( !empty( $_POST['setting_mercadopago_email'] ) ) {
+            $email = filter_var( $_POST['setting_mercadopago_email'], FILTER_VALIDATE_EMAIL );
             if ( empty( $email ) ) {
                 $error->add( 'dokan_email', __( 'Invalid email', 'dokan-lite' ) );
             }
@@ -488,9 +488,9 @@ class Dokan_Template_Settings {
                 );
             }
 
-            if ( isset( $_POST['settings']['paypal'] ) ) {
-                $dokan_settings['payment']['paypal'] = array(
-                    'email' => filter_var( $_POST['settings']['paypal']['email'], FILTER_VALIDATE_EMAIL )
+            if ( isset( $_POST['settings']['mercadopago'] ) ) {
+                $dokan_settings['payment']['mercadopago'] = array(
+                    'email' => filter_var( $_POST['settings']['mercadopago']['email'], FILTER_VALIDATE_EMAIL )
                 );
             }
 
@@ -656,13 +656,13 @@ class Dokan_Template_Settings {
             }
         }
 
-        // Calculate Payment method val for Paypal
-        if ( isset( $dokan_settings['payment'] ) && isset( $dokan_settings['payment']['paypal'] ) ) {
-            $p_email = isset($dokan_settings['payment']['paypal']['email']) ? $dokan_settings['payment']['paypal']['email'] : false;
+        // Calculate Payment method val for MercadoPago
+        if ( isset( $dokan_settings['payment'] ) && isset( $dokan_settings['payment']['mercadopago'] ) ) {
+            $p_email = isset($dokan_settings['payment']['mercadopago']['email']) ? $dokan_settings['payment']['mercadopago']['email'] : false;
             if ( $p_email != false ) {
 
                 $profile_val         = $profile_val + $payment_method_val;
-                $track_val['paypal'] = $payment_method_val;
+                $track_val['mercadopago'] = $payment_method_val;
                 $payment_method_val  = 0;
             }
         }

@@ -59,7 +59,7 @@ class Dokan_Admin_Withdraw extends Dokan_Withdraw {
         $status = $_POST['status_page'];
 
         switch ( $bulk_action ) {
-        case 'paypal':
+        case 'mercadopago':
             $this->generate_csv( $withdraw_ids );
             break;
 
@@ -141,7 +141,7 @@ class Dokan_Admin_Withdraw extends Dokan_Withdraw {
 
         foreach ( $result as $key => $obj ) {
 
-            if ( $obj->method != 'paypal' ) {
+            if ( $obj->method != 'mercadopago' ) {
                 continue;
             }
 
@@ -352,11 +352,6 @@ class Dokan_Admin_Withdraw extends Dokan_Withdraw {
                             <option value="approve"><?php _e( 'Approve Requests', 'dokan-lite' ); ?></option>
                             <option value="pending"><?php _e( 'Mark Pending', 'dokan-lite' ); ?></option>
 
-                        <?php } ?>
-
-                        <?php if ( $result ) { ?>
-                            <option value="delete"><?php _e( 'Delete', 'dokan-lite' ); ?></option>
-                            <option value="paypal"><?php _e( 'Download PayPal mass payment file', 'dokan-lite' ); ?></option>
                         <?php } ?>
                     </select>
 

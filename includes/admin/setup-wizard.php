@@ -418,20 +418,20 @@ class Dokan_Setup_Wizard {
                         <ul class="wc-wizard-payment-gateways">
                             <li class="wc-wizard-gateway">
                                 <div class="wc-wizard-gateway-enable">
-                                    <input type="checkbox" name="withdraw_methods[paypal]" class="input-checkbox" value="paypal" <?php echo ( array_key_exists( 'paypal', $withdraw_methods ) ) ? 'checked="true"' : ''; ?>/>
-                                    <label>Paypal</label>
+                                    <input type="checkbox" name="withdraw_methods[mercadopago]" class="input-checkbox" value="mercadopago" <?php echo ( array_key_exists( 'mercadopago', $withdraw_methods ) ) ? 'checked="true"' : ''; ?>/>
+                                    <label><?php _e( 'MercadoPago', 'dokan-lite' ); ?></label>
                                 </div>
                             </li>
                             <li class="wc-wizard-gateway">
                                 <div class="wc-wizard-gateway-enable">
                                     <input type="checkbox" name="withdraw_methods[bank]" class="input-checkbox" value="bank" <?php echo ( array_key_exists( 'bank', $withdraw_methods ) ) ? 'checked="true"' : ''; ?>/>
-                                    <label>Bank Transfer</label>
+                                    <label><?php _e( 'Bank Transfer', 'dokan-lite' ); ?></label>
                                 </div>
                             </li>
                             <li class="wc-wizard-gateway">
                                 <div class="wc-wizard-gateway-enable">
                                     <input type="checkbox" name="withdraw_methods[skrill]" class="input-checkbox" value="skrill" <?php echo ( array_key_exists( 'skrill', $withdraw_methods ) ) ? 'checked="true"' : ''; ?>/>
-                                    <label>Skrill</label>
+                                    <label><?php _e( 'Skrill', 'dokan-lite' ); ?></label>
                                 </div>
                             </li>
                         </ul>

@@ -449,9 +449,9 @@ class Dokan_Seller_Setup_Wizard extends Dokan_Setup_Wizard {
             );
         }
 
-        if ( isset( $_POST['settings']['paypal'] ) ) {
-            $dokan_settings['payment']['paypal'] = array(
-                'email' => filter_var( $_POST['settings']['paypal']['email'], FILTER_VALIDATE_EMAIL )
+        if ( isset( $_POST['settings']['mercadopago'] ) ) {
+            $dokan_settings['payment']['mercadopago'] = array(
+                'email' => filter_var( $_POST['settings']['mercadopago']['email'], FILTER_VALIDATE_EMAIL )
             );
         }
 
