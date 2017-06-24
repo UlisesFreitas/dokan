@@ -67,7 +67,7 @@ class Dokan_Template_Settings {
         global $wp;
 
         if ( isset( $wp->query_vars['settings'] ) && $wp->query_vars['settings'] == 'store' ) {
-            $heading = __( 'Settings', 'dokan-lite' );
+            $heading = __( 'Ajustes de tienda', 'dokan-lite' );
         } elseif ( isset( $wp->query_vars['settings'] ) && $wp->query_vars['settings'] == 'payment' ) {
             $heading = __( 'Payment Settings', 'dokan-lite' );
         } else {

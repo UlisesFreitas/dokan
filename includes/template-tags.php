@@ -308,69 +308,41 @@ function dokan_get_dashboard_nav() {
             'title' => __( 'Products', 'dokan-lite'),
             'icon'  => '<i class="fa fa-briefcase"></i>',
             'url'   => dokan_get_navigation_url( 'products' ),
-            'pos'   => 30
+            'pos'   => 20
         ),
         'orders' => array(
             'title' => __( 'Orders', 'dokan-lite'),
             'icon'  => '<i class="fa fa-shopping-cart"></i>',
             'url'   => dokan_get_navigation_url( 'orders' ),
-            'pos'   => 50
+            'pos'   => 30
         ),
-
         'withdraw' => array(
             'title' => __( 'Withdraw', 'dokan-lite'),
             'icon'  => '<i class="fa fa-upload"></i>',
             'url'   => dokan_get_navigation_url( 'withdraw' ),
-            'pos'   => 70
-        ),
-    );
-
-    $settings = array(
-        'title' => __( 'Settings <i class="fa fa-angle-right pull-right"></i>', 'dokan-lite'),
-        'icon'  => '<i class="fa fa-cog"></i>',
-        'url'   => dokan_get_navigation_url( 'settings/store' ),
-        'pos'   => 200,
-    );
-
-    $settings_sub = array(
-        'back' => array(
-            'title' => __( 'Back to Dashboard', 'dokan-lite'),
-            'icon'  => '<i class="fa fa-long-arrow-left"></i>',
-            'url'   => dokan_get_navigation_url(),
-            'pos'   => 10
+            'pos'   => 40
         ),
         'store' => array(
-            'title' => __( 'Store', 'dokan-lite'),
+            'title' => __( 'Ajustes de tienda', 'dokan-lite'),
             'icon'  => '<i class="fa fa-university"></i>',
             'url'   => dokan_get_navigation_url( 'settings/store' ),
-            'pos'   => 30
+            'pos'   => 50
         ),
         'payment' => array(
-            'title' => __( 'Payment', 'dokan-lite'),
+            'title' => __( 'Payment Settings', 'dokan-lite'),
             'icon'  => '<i class="fa fa-credit-card"></i>',
             'url'   => dokan_get_navigation_url( 'settings/payment' ),
-            'pos'   => 50
+            'pos'   => 60
+        ),
+        'logout' => array(
+            'title' => __( 'Log out', 'dokan-lite'),
+            'icon'  => '<i class="fa fa-power-off"></i>',
+            'url'   => wp_logout_url( home_url() ),
+            'pos'   => 70
         )
     );
 
-
-    /**
-     * Filter to get the seller dashboard settings navigation.
-     *
-     * @since 2.2
-     *
-     * @param array.
-     */
-    $settings['sub']  = apply_filters( 'dokan_get_dashboard_settings_nav', $settings_sub );
-
-
-    uasort( $settings['sub'], 'dokan_nav_sort_by_pos' );
-
-    $urls['settings'] = $settings;
-
     $nav_urls = apply_filters( 'dokan_get_dashboard_nav', $urls );
-
-    uasort( $nav_urls, 'dokan_nav_sort_by_pos' );
 
     /**
      * Filter to get the final seller dashboard navigation.
@@ -399,8 +371,8 @@ function dokan_dashboard_nav( $active_menu = '' ) {
     $nav_menu          = dokan_get_dashboard_nav();
     $active_menu_parts = explode( '/', $active_menu );
 
-    if ( isset( $active_menu_parts[1] ) && $active_menu_parts[0] == 'settings' && array_key_exists( $active_menu_parts[1], $nav_menu['settings']['sub'] ) ) {
-        $urls        = $nav_menu['settings']['sub'];
+    if ( isset( $active_menu_parts[1] ) && $active_menu_parts[0] == 'settings' && array_key_exists( $active_menu_parts[1], $nav_menu ) ) {
+        $urls        = $nav_menu;
         $active_menu = $active_menu_parts[1];
     } else {
         $urls = $nav_menu;
@@ -412,12 +384,6 @@ function dokan_dashboard_nav( $active_menu = '' ) {
         $class = ( $active_menu == $key ) ? 'active ' . $key : $key;
         $menu .= sprintf( '<li class="%s"><a href="%s">%s %s</a></li>', $class, $item['url'], $item['icon'], $item['title'] );
     }
-
-    $menu .= '<li class="dokan-common-links dokan-clearfix">
-            <a title="' . __( 'Visit Store', 'dokan-lite' ) . '" class="tips" data-placement="top" href="' . dokan_get_store_url( get_current_user_id()) .'" target="_blank"><i class="fa fa-external-link"></i></a>
-            <a title="' . __( 'Edit Account', 'dokan-lite' ) . '" class="tips" data-placement="top" href="' . dokan_get_navigation_url( 'edit-account' ) . '"><i class="fa fa-user"></i></a>
-            <a title="' . __( 'Log out', 'dokan-lite' ) . '" class="tips" data-placement="top" href="' . wp_logout_url( home_url() ) . '"><i class="fa fa-power-off"></i></a>
-        </li>';
 
     $menu .= '</ul>';
 
