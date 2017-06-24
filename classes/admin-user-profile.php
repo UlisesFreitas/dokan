@@ -216,27 +216,15 @@ class Dokan_Admin_User_Profile {
                         </td>
                     </tr>
                     <tr>
-                        <th><?php _e( 'Account Name ', 'dokan-lite' ); ?></th>
+                        <th><?php _e( 'CBU ', 'dokan-lite' ); ?></th>
                         <td>
-                            <input type="text" disabled class="regular-text" value="<?php echo isset( $store_settings['payment']['bank']['ac_name'] ) ? esc_attr( $store_settings['payment']['bank']['ac_name'] ) : ''; ?>">
+                            <input type="text" disabled class="regular-text" value="<?php echo isset( $store_settings['payment']['bank']['cbu'] ) ? esc_attr( $store_settings['payment']['bank']['cbu'] ) : ''; ?>">
                         </td>
                     </tr>
                     <tr>
-                        <th><?php _e( 'Account Number ', 'dokan-lite' ); ?></th>
+                        <th><?php _e( 'CUIT ', 'dokan-lite' ); ?></th>
                         <td>
-                            <input type="text" disabled class="regular-text" value="<?php echo isset( $store_settings['payment']['bank']['ac_number'] ) ? esc_attr( $store_settings['payment']['bank']['ac_number'] ) : ''; ?>">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><?php _e( 'Bank Address ', 'dokan-lite' ); ?></th>
-                        <td>
-                            <input type="text" disabled class="regular-text" value="<?php echo isset( $store_settings['payment']['bank']['bank_addr'] ) ? esc_attr( $store_settings['payment']['bank']['bank_addr'] ) : ''; ?>">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><?php _e( 'Bank Swift ', 'dokan-lite' ); ?></th>
-                        <td>
-                            <input type="text" disabled class="regular-text" value="<?php echo isset( $store_settings['payment']['bank']['swift'] ) ? esc_attr( $store_settings['payment']['bank']['swift'] ) : ''; ?>">
+                            <input type="text" disabled class="regular-text" value="<?php echo isset( $store_settings['payment']['bank']['cuit'] ) ? esc_attr( $store_settings['payment']['bank']['cuit'] ) : ''; ?>">
                         </td>
                     </tr>
                 <?php } ?>

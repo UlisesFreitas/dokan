@@ -1030,20 +1030,14 @@ function dokan_get_seller_bank_details( $seller_id ) {
     $payment = $info['payment']['bank'];
     $details = array();
 
-    if ( isset( $payment['ac_name'] ) ) {
-        $details[] = sprintf( __( 'Account Name: %s', 'dokan-lite' ), $payment['ac_name'] );
-    }
-    if ( isset( $payment['ac_number'] ) ) {
-        $details[] = sprintf( __( 'Account Number: %s', 'dokan-lite' ), $payment['ac_number'] );
-    }
     if ( isset( $payment['bank_name'] ) ) {
         $details[] = sprintf( __( 'Bank Name: %s', 'dokan-lite' ), $payment['bank_name'] );
     }
-    if ( isset( $payment['bank_addr'] ) ) {
-        $details[] = sprintf( __( 'Address: %s', 'dokan-lite' ), $payment['bank_addr'] );
+    if ( isset( $payment['cbu'] ) ) {
+        $details[] = sprintf( __( 'CBU: %s', 'dokan-lite' ), $payment['cbu'] );
     }
-    if ( isset( $payment['swift'] ) ) {
-        $details[] = sprintf( __( 'SWIFT: %s', 'dokan-lite' ), $payment['swift'] );
+    if ( isset( $payment['cuit'] ) ) {
+        $details[] = sprintf( __( 'CUIT: %s', 'dokan-lite' ), $payment['cuit'] );
     }
 
     return nl2br( implode( "\n", $details ) );

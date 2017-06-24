@@ -482,11 +482,9 @@ class Dokan_Template_Settings {
                 $bank = $_POST['settings']['bank'];
 
                 $dokan_settings['payment']['bank'] = array(
-                    'ac_name'   => sanitize_text_field( $bank['ac_name'] ),
-                    'ac_number' => sanitize_text_field( $bank['ac_number'] ),
                     'bank_name' => sanitize_text_field( $bank['bank_name'] ),
-                    'bank_addr' => sanitize_text_field( $bank['bank_addr'] ),
-                    'swift'     => sanitize_text_field( $bank['swift'] ),
+                    'cbu' => sanitize_text_field( $bank['cbu'] ),
+                    'cuit' => sanitize_text_field( $bank['cuit'] ),
                 );
             }
 
