@@ -418,12 +418,14 @@ class Dokan_Admin_Settings {
                 )
             ),
             'dokan_appearance' => array(
+/*
                 'setup_wizard_logo_url' => array(
                     'name'    => 'setup_wizard_logo_url',
                     'label'   => __( 'Vendor Setup Wizard Logo', 'dokan-lite' ),
                     'type'    => 'file',
                     'desc'    => __( 'Recommended Logo size ( 270px X 90px ). If no logo is uploaded, site title is shown by default.', 'dokan-lite' ),
                 ),
+*/
                 'store_header_template' => array(
                     'name'    => 'store_header_template',
                     'label'   => __( 'Store Header Template', 'dokan-lite' ),

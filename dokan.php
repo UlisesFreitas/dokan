@@ -523,7 +523,7 @@ final class WeDevs_Dokan {
         require_once $inc_dir . 'wc-functions.php';
         require_once $lib_dir . 'class-wedevs-insights.php';
         require_once $inc_dir . '/admin/setup-wizard.php';
-        require_once $classes_dir . 'seller-setup-wizard.php';
+        //require_once $classes_dir . 'seller-setup-wizard.php';
 
         require_once $inc_dir . 'wc-template.php';
 
