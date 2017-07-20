@@ -1824,3 +1824,5 @@ function dokan_set_is_home_false_on_store() {
         $wp_query->is_home = false;
     }
 }
+
+register_sidebar( array( 'name' => __( 'Dokan Store Sidebar', 'dokan-lite' ), 'id' => 'sidebar-store' ) );
