@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Dokan (Lite) - Multi-vendor Marketplace 2.6.2\n"
 "Report-Msgid-Bugs-To: http://wedevs.com/support/forum/theme-support/dokan/\n"
 "POT-Creation-Date: 2017-07-25 15:44-0300\n"
-"PO-Revision-Date: 2017-07-25 16:13-0300\n"
+"PO-Revision-Date: 2017-07-25 16:16-0300\n"
 "Last-Translator: \n"
 "Language-Team: Sophivorus\n"
 "Language: es_ES\n"
@@ -3410,7 +3410,7 @@ msgstr "Cantidad a extraer"
 
 #: templates/withdraw/request-form.php:26
 msgid "Payment Method"
-msgstr "Método de pago"
+msgstr "Método de extracción"
 
 #: templates/withdraw/request-form.php:41
 msgid "Submit Request"
