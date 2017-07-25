@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Dokan (Lite) - Multi-vendor Marketplace 2.6.2\n"
 "Report-Msgid-Bugs-To: http://wedevs.com/support/forum/theme-support/dokan/\n"
 "POT-Creation-Date: 2017-07-25 15:44-0300\n"
-"PO-Revision-Date: 2017-07-25 16:02-0300\n"
+"PO-Revision-Date: 2017-07-25 16:13-0300\n"
 "Last-Translator: \n"
 "Language-Team: Sophivorus\n"
 "Language: es_ES\n"
@@ -600,7 +600,7 @@ msgstr "Costo de envío"
 
 #: classes/template-orders.php:110 classes/template-orders.php:179
 msgid "Payment method"
-msgstr "Modo de pago"
+msgstr "Método de extracción"
 
 #: classes/template-orders.php:111 classes/template-orders.php:180
 #: templates/orders/listing.php:18 templates/orders/listing.php:34
@@ -816,7 +816,7 @@ msgstr "No tienes dinero disponible para una extracción."
 
 #: classes/template-withdraw.php:383
 msgid "Sorry, no transactions were found!"
-msgstr "Lo siento, no se han encontrado transacciones"
+msgstr "No se han encontrado extracciones"
 
 #: classes/tracker.php:12
 msgid ""
