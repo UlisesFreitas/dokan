@@ -322,17 +322,17 @@ function dokan_get_dashboard_nav() {
             'url'   => dokan_get_navigation_url( 'withdraw' ),
             'pos'   => 40
         ),
-        'store' => array(
-            'title' => __( 'Store', 'dokan-lite'),
-            'icon'  => '<i class="fa fa-university"></i>',
-            'url'   => dokan_get_navigation_url( 'settings/store' ),
-            'pos'   => 50
-        ),
         'payment' => array(
             'title' => __( 'Payment Settings', 'dokan-lite'),
             'icon'  => '<i class="fa fa-credit-card"></i>',
             'url'   => dokan_get_navigation_url( 'settings/payment' ),
             'pos'   => 60
+        ),
+        'store' => array(
+            'title' => __( 'Store', 'dokan-lite'),
+            'icon'  => '<i class="fa fa-university"></i>',
+            'url'   => dokan_get_navigation_url( 'settings/store' ),
+            'pos'   => 50
         ),
         'logout' => array(
             'title' => __( 'Log out', 'dokan-lite'),
